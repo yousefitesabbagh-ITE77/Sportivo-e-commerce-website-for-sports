@@ -1,0 +1,92 @@
+[
+  {
+    "id": "tabletennis-1",
+    "image": "images/products/table-tennis/12-pingpong-green.webp",
+    "name": "Professional Ping Pong Balls (12-pack)",
+    "rating": {
+      "stars": 4.6,
+      "count": 5174,
+      "distribution": {
+        "5": 82,
+        "4": 8,
+        "3": 5,
+        "2": 1,
+        "1": 4
+      }
+    },
+    "priceCents": 7499,
+    "keywords": ["table tennis", "ping pong", "balls"]
+  },
+  {
+    "id": "tabletennis-2",
+    "image": "images/products/table-tennis/carbon-pro-truls-edition-2-1-full.webp",
+    "name": "Stiga Professional Racket",
+    "rating": {
+      "stars": 4.7,
+      "count": 2893,
+      "distribution": {
+        "5": 78,
+        "4": 12,
+        "3": 6,
+        "2": 2,
+        "1": 2
+      }
+    },
+    "priceCents": 11720,
+    "keywords": ["table tennis", "stiga", "racket"]
+  },
+  {
+    "id": "tabletennis-3",
+    "image": "images/products/table-tennis/3-stars-stiga-ball.webp",
+    "name": "Stiga Professional balls",
+    "rating": {
+      "stars": 4.5,
+      "count": 1567,
+      "distribution": {
+        "5": 75,
+        "4": 15,
+        "3": 6,
+        "2": 2,
+        "1": 2
+      }
+    },
+    "priceCents": 7583,
+    "keywords": ["table tennis", "stiga", "table"]
+  },
+  {
+    "id": "tabletennis-4",
+    "image": "images/products/table-tennis/rubberRhyzerPro50.webp",
+    "name": "Rubber Rhyzer Pro 50",
+    "rating": {
+      "stars": 4.3,
+      "count": 892,
+      "distribution": {
+        "5": 68,
+        "4": 18,
+        "3": 8,
+        "2": 3,
+        "1": 3
+      }
+    },
+    "priceCents": 7499,
+    "keywords": ["table tennis", "rubber", "rhyzer"]
+  },
+  {
+    "id": "tabletennis-5",
+    "image": "images/products/table-tennis/Nittaku-3-star-premium.webp",
+    "name": "Nittaku 3 stars ball premium",
+    "rating": {
+      "stars": 4.8,
+      "count": 3241,
+      "distribution": {
+        "5": 85,
+        "4": 10,
+        "3": 3,
+        "2": 1,
+        "1": 1
+      }
+    },
+    "priceCents": 7499,
+    "keywords": ["table tennis", "ball", "nittaku"]
+  }
+]

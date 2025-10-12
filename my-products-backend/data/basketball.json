@@ -1,0 +1,92 @@
+[
+  {
+    "id": "basketball-1",
+    "image": "images/products/basketball/wilson-evolution.webp",
+    "name": "WILSON Evolution Game Basketball",
+    "rating": {
+      "stars": 4.6,
+      "count": 5174,
+      "distribution": {
+        "5": 82,
+        "4": 8,
+        "3": 5,
+        "2": 1,
+        "1": 4
+      }
+    },
+    "priceCents": 7499,
+    "keywords": ["basketball", "wilson", "indoor"]
+  },
+  {
+    "id": "basketball-2",
+    "image": "images/products/basketball/basketball-sb1015.webp",
+    "name": "Nike Jordan Pro Performance",
+    "rating": {
+      "stars": 4.7,
+      "count": 2893,
+      "distribution": {
+        "5": 78,
+        "4": 12,
+        "3": 6,
+        "2": 2,
+        "1": 2
+      }
+    },
+    "priceCents": 11720,
+    "keywords": ["basketball", "nike", "jordan"]
+  },
+  {
+    "id": "basketball-3",
+    "image": "images/products/basketball/basketball-x6000.webp",
+    "name": "Spalding NBA Official Game Ball",
+    "rating": {
+      "stars": 4.5,
+      "count": 1567,
+      "distribution": {
+        "5": 75,
+        "4": 15,
+        "3": 6,
+        "2": 2,
+        "1": 2
+      }
+    },
+    "priceCents": 7583,
+    "keywords": ["basketball", "spalding", "nba"]
+  },
+  {
+    "id": "basketball-4",
+    "image": "images/products/basketball/molten-jb3200.webp",
+    "name": "Molten NBA Official Game Ball",
+    "rating": {
+      "stars": 4.3,
+      "count": 892,
+      "distribution": {
+        "5": 68,
+        "4": 18,
+        "3": 8,
+        "2": 3,
+        "1": 3
+      }
+    },
+    "priceCents": 7499,
+    "keywords": ["basketball", "ball", "Molten"]
+  },
+  {
+    "id": "basketball-5",
+    "image": "images/products/basketball/wildcats-14.webp",
+    "name": "Wildcats 14 t-shirt",
+    "rating": {
+      "stars": 4.8,
+      "count": 3241,
+      "distribution": {
+        "5": 85,
+        "4": 10,
+        "3": 3,
+        "2": 1,
+        "1": 1
+      }
+    },
+    "priceCents": 7499,
+    "keywords": ["basketball", "ball", "t-shirt"]
+  }
+]

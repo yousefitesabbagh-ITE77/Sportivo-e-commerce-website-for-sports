@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accessibility Statement - Sportivo Sports</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/shared/sportivo-header.css">
+    <link rel="stylesheet" href="styles/shared/login-modal.css">
+    <link rel="stylesheet" href="styles/pages/legal.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="sportivo-header">
+            <div class="sportivo-header-left-section">
+              <a href="sportivo.html" class="header-link">
+                <img class="sportivo-logo" src="images/sportivo-logo-white.png">
+                <img class="sportivo-mobile-logo" src="images/sportivo-mobile-logo-white.png">
+              </a>
+            </div>
+    
+            <div class="sportivo-header-middle-section">
+              <div class="search-container">
+                <input class="search-bar js-search-bar" type="text" placeholder="Search sports products...">
+                <button class="search-button js-search-button">
+                  <img class="search-icon" src="images/icons/search-icon.png">
+                </button>
+              </div>
+            </div>
+    
+            <div class="sportivo-header-right-section">
+              <a class="login-link header-link js-login-trigger" href="#">
+                <span class="login-text">Sign in</span>
+              </a>
+              <a class="orders-link header-link" href="orders.html">
+                <span class="returns-text">Returns</span>
+                <span class="orders-text">& Orders</span>
+              </a>
+              <a class="wishlist-link header-link" href="wishlist.html">
+                <span class="wishlist-text">Wishlist</span>
+                <div class="wishlist-count js-wishlist-count" style="display: none;">0</div>
+              </a>
+              <a class="cart-link header-link" href="checkout.html">
+                <img class="cart-icon" src="images/icons/cart-icon.png">
+                <div class="cart-quantity js-cart-quantity"></div>
+                <div class="cart-text">Cart</div>
+              </a>
+            </div>
+          </div>
+
+        <div class="legal-page">
+            <div class="legal-container">
+                <h1>Accessibility Statement</h1>
+                <div class="last-updated">Last updated: December 1, 2025</div>
+                
+                <div class="table-of-contents">
+                    <h3>Table of Contents</h3>
+                    <ol>
+                        <li><a href="#our-commitment">Our Commitment</a></li>
+                        <li><a href="#measures">Measures to Support Accessibility</a></li>
+                        <li><a href="#conformance-status">Conformance Status</a></li>
+                        <li><a href="#feedback">Feedback</a></li>
+                    </ol>
+                </div>
+                
+                <div class="legal-content">
+                    <section id="our-commitment">
+                        <h2>1. Our Commitment</h2>
+                        <p>Sportivo Sports is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards to ensure we provide equal access to all our users.</p>
+                    </section>
+
+                    <section id="measures">
+                        <h2>2. Measures to Support Accessibility</h2>
+                        <p>We have implemented the following measures to ensure the accessibility of our website:</p>
+                        <ul>
+                            <li>Providing continual accessibility training for our staff.</li>
+                            <li>Assigning clear accessibility targets and responsibilities.</li>
+                            <li>Employing formal accessibility quality assurance methods.</li>
+                            <li>Ensuring our website is navigable via keyboard and screen reader.</li>
+                            <li>Using clear and simple language.</li>
+                            <li>Providing alt text for all meaningful images.</li>
+                        </ul>
+                    </section>
+
+                    <section id="conformance-status">
+                        <h2>3. Conformance Status</h2>
+                        <p>We aim to adhere to the <strong>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong>. These guidelines explain how to make web content more accessible to people with disabilities.</p>
+                        <p>We are actively working to increase the accessibility and usability of our website and in doing so adhere to many of the available standards and guidelines.</p>
+                    </section>
+
+                    <section id="feedback">
+                        <h2>4. Feedback</h2>
+                        <p>We welcome your feedback on the accessibility of Sportivo Sports. Please let us know if you encounter accessibility barriers on our website:</p>
+                        <p>Email: accessibility@sportivosports.com<br>
+                        Phone: (206) 555-1234</p>
+                        <p>We try to respond to feedback within 5 business days.</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer-container"></div>
+    </div>
+
+    <script src="scripts/auth-modal.js"></script>
+    <script type="module">
+        import { renderFooter } from './scripts/shared/footer.js';
+        import { updateCartQuantity } from './scripts/cart-manager.js';
+        import { updateWishlistCounter } from './scripts/wishlist-manager.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderFooter();
+            updateCartQuantity();
+            updateWishlistCounter();
+            initializeAuthModal();
+        });
+    </script>
+</body>
+</html>

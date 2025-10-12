@@ -1,0 +1,648 @@
+.sportivo-header {
+  background-color: #0e122b;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+}
+
+.sportivo-header-left-section {
+  width: 180px;
+}
+
+@media (max-width: 800px) {
+  .sportivo-header-left-section {
+    width: unset;
+  }
+}
+
+.header-link {
+  display: inline-block;
+  padding: 6px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.header-link:hover {
+  border: 1px solid white;
+}
+
+.sportivo-logo {
+  width: 150px;
+  margin-top: -20px;
+}
+
+.sportivo-mobile-logo {
+  display: none;
+}
+
+@media (max-width: 575px) {
+  .sportivo-logo {
+    display: none;
+  }
+
+  .sportivo-mobile-logo {
+    display: block;
+    height: 35px;
+    margin-top: 5px;
+  }
+}
+
+.sportivo-header-middle-section {
+  flex: 1;
+  max-width: 650px; /* Reduced from 850px */
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+}
+
+.search-bar {
+  flex: 1;
+  width: 0;
+  font-size: 16px;
+  height: 38px;
+  padding-left: 15px;
+  border: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-button {
+  background-color: rgb(254, 189, 105);
+  border: none;
+  width: 45px;
+  height: 38px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  flex-shrink: 0;
+}
+
+.search-icon {
+  height: 22px;
+  margin-left: 2px;
+  margin-top: 3px;
+}
+
+.sportivo-header-right-section {
+  width: 300px; /* More space for three items */
+  flex-shrink: 0;
+  display: flex;
+  justify-content: end;
+  gap: 8px; /* More spacing */
+}
+
+.orders-link {
+  color: white;
+}
+
+.returns-text {
+  display: block;
+  font-size: 13px;
+}
+
+.orders-text {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+/* Login Link Styles - Matches your existing header */
+.login-link {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login-link:hover {
+  border: 1px solid white;
+}
+
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .login-link {
+    padding: 6px;
+  }
+  
+  .login-text {
+    font-size: 10px;
+  }
+  
+  .login-subtext {
+    font-size: 12px;
+  }
+}
+
+/* Sport Filter Styles */
+.sport-filter-container {
+  margin-left: 15px;
+}
+
+.sport-filter {
+  padding: 8px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background-color: white;
+  font-family: Roboto, Arial;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.sport-filter:hover {
+  border-color: #ff9900;
+}
+
+.sport-filter:focus {
+  border-color: #ff9900;
+  box-shadow: 0 0 3px 2px rgba(255, 153, 0, 0.5);
+}
+
+
+/* Sport Filter Styles - Smaller version */
+.sport-filter-container {
+  margin-right: 8px;
+}
+
+.sport-filter {
+  padding: 6px 8px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-family: Roboto, Arial;
+  font-size: 12px;
+  cursor: pointer;
+  outline: none;
+  height: 38px; /* Match search bar height */
+  min-width: 120px;
+}
+
+.sport-filter:hover {
+  border-color: #ff9900;
+  background-color: #ffffff;
+}
+
+.sport-filter:focus {
+  border-color: #ff9900;
+  box-shadow: 0 0 3px 2px rgba(255, 153, 0, 0.5);
+  background-color: #ffffff;
+}
+
+
+/* Enhanced Search Container */
+.search-container {
+  position: relative;
+  flex: 1;
+  max-width: 600px;
+}
+
+/* Search Suggestions Dropdown */
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 1000;
+  display: none;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.search-suggestions.active {
+  display: block;
+  animation: fadeInDown 0.3s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading State */
+.suggestions-loading {
+  padding: 16px;
+  text-align: center;
+  color: #565959;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.loading-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #007185;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Search Result Items */
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f2f2;
+  transition: background-color 0.2s;
+  gap: 12px;
+}
+
+.suggestion-item:hover,
+.suggestion-item.selected {
+  background-color: #f8f9fa;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-image {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.suggestion-details {
+  flex: 1;
+}
+
+.suggestion-name {
+  font-size: 14px;
+  color: #0f1111;
+  margin-bottom: 2px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.suggestion-price {
+  font-size: 14px;
+  font-weight: bold;
+  color: #b12704;
+}
+
+.suggestion-sport {
+  font-size: 12px;
+  color: #565959;
+  margin-top: 2px;
+}
+
+.suggestion-sport-icon {
+  margin-right: 4px;
+}
+
+/* View All Results */
+.suggestion-view-all {
+  padding: 12px 16px;
+  background: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+  font-weight: 600;
+  color: #007185;
+  cursor: pointer;
+  text-align: center;
+}
+
+.suggestion-view-all:hover {
+  background: #e8f0fe;
+}
+
+/* No Results */
+.suggestion-no-results {
+  padding: 16px;
+  text-align: center;
+  color: #565959;
+  font-style: italic;
+}
+
+/* Fix Search Container Width */
+.search-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  max-width: 600px;
+}
+
+/* Ensure Search Bar Takes Full Width */
+.search-bar {
+  flex: 1;
+  width: 100%;
+}
+
+/* Adjust Sport Filter to Not Squeeze Search */
+.sportivo-header-middle-section {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 800px;
+}
+
+.sport-filter-container {
+  margin-right: 12px;
+  flex-shrink: 0; /* Prevent sport filter from shrinking */
+}
+
+.search-container {
+  flex: 1;
+  min-width: 200px; /* Ensure minimum width */
+}
+
+
+/* Wishlist Link in Header */
+.wishlist-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.wishlist-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* Fix the right section layout */
+.sportivo-header-right-section {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* This adds space between items */
+  flex-shrink: 0; /* Prevents items from shrinking */
+}
+
+
+/* Add hover effect */
+.login-link:hover,
+.orders-link:hover,
+.wishlist-link:hover,
+.cart-link:hover {
+  border-color: white; 
+}
+
+/* Fix navbar layout - Step 1 */
+.sportivo-header-right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+/* Style each navigation item */
+.wishlist-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+.wishlist-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.wishlist-text {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Wishlist counter badge */
+.wishlist-count {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #ff4444;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Fix header layout to prevent crowding */
+.sportivo-header {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  height: 60px;
+}
+
+.sportivo-header-left-section {
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.sportivo-header-middle-section {
+  flex: 1;
+  max-width: 800px;
+  min-width: 200px;
+  margin: 0 20px;
+}
+
+.sportivo-header-right-section {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.login-text,
+.returns-text,
+.wishlist-text,
+.cart-text {
+  font-size: 11px;
+}
+
+.login-subtext,
+.orders-text {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* Fix cart layout */
+.cart-link {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+
+.cart-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.cart-quantity {
+  position: absolute;
+  top: 5px;
+  left: 25px;
+  background: #ff4444;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.cart-text {
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+/* ===== SEARCH SUGGESTIONS STYLES ===== */
+.search-container {
+  position: relative;
+  flex: 1;
+  max-width: 800px;
+}
+
+.search-suggestions {
+  display: none;
+  position: absolute;
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: 4px;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  border-bottom: 1px solid #f0f2f2;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover {
+  background-color: #f8f9fa;
+}
+
+.suggestion-image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #f8f9fa;
+  padding: 4px;
+  margin-right: 12px;
+}
+
+.suggestion-info {
+  flex: 1;
+}
+
+.suggestion-name {
+  color: #2d3748;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 2px;
+  line-height: 1.3;
+}
+
+.suggestion-price {
+  color: #b12704;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* Search all item */
+.search-all-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+.search-all-icon {
+  font-size: 16px;
+}
+
+.search-all-text {
+  color: #007185;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .search-suggestions {
+    position: fixed;
+    top: 60px !important;
+    left: 10px !important;
+    right: 10px !important;
+    width: auto !important;
+  }
+  
+  .suggestion-name {
+    -webkit-line-clamp: 1;
+  }
+}

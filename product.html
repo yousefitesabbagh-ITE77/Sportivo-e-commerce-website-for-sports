@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Product Details - Sportivo Sports</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS files -->
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/shared/sportivo-header.css">
+    <link rel="stylesheet" href="styles/shared/login-modal.css">
+    <link rel="stylesheet" href="styles/pages/product/product.css">
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- Header will be injected here by JavaScript. -->
+      <div id="header-container"></div>
+
+      <div class="main">
+        <div class="product-details-container js-product-details-container">
+          <!-- Product details will be inserted here by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Our footer will be injected here by JavaScript -->
+      <div id="footer-container"></div>
+    </div>
+
+    <script src="scripts/auth-modal.js"></script>
+    <script type="module" src="scripts/product.js"></script>
+
+    <!-- NEW: Header and Footer Initialization Script -->
+    <script type="module">
+      import { renderHeader } from './scripts/shared/header.js';
+      import { renderFooter } from './scripts/shared/footer.js';
+
+      // Render the header and footer
+      document.addEventListener('DOMContentLoaded', () => {
+          renderHeader();
+          renderFooter();
+      });
+    </script>
+  </body>
+</html>

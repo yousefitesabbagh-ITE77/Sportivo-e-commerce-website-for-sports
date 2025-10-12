@@ -1,0 +1,16 @@
+/* Checkout Header - Logo in the Middle Only */
+
+/* This file now only contains minor adjustments for checkout-specific content. */
+/* All major styling is inherited from styles/shared/sportivo-header.css */
+
+/* Ensure the header is not fixed on the checkout page */
+.checkout-header .sportivo-header {
+  position: relative;
+  top: auto;
+}
+
+/* Center the content in the middle section */
+.checkout-header .sportivo-header-middle-section {
+  justify-content: center;
+  text-align: center;
+}

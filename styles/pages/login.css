@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --sportivo-yellow: #FFD814;
+    --sportivo-yellow-hover: #F7CA00;
+    --sportivo-blue: #0066c0;
+    --sportivo-blue-hover: #c45500;
+    --border-color: #a6a6a6;
+    --text-primary: #111;
+    --text-secondary: #767676;
+    --background-white: #ffffff;
+    --background-gray: #f7f7f7;
+}
+
+body {
+    font-family: 'Sportivo Ember', Arial, sans-serif;
+    background: linear-gradient(to bottom, #f7f7f7 0%, #ffffff 100%);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+#app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.login-header {
+    background: #0e122b;
+    border-bottom: 1px solid #dddddd;
+    height: 60px; /* Fixed height - won't change */
+    display: flex;
+    align-items: center; /* Vertically center the logo */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden; /* Prevent logo from expanding header */
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    height: 100%; /* Take full height of header */
+    align-items: center; /* Vertically center content */
+}
+
+.sportivo-logo {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 100%; /* Constrain to header height */
+}
+
+.logo-link {
+    text-decoration: none;
+    display: inline-block;
+    max-height: 100%; /* Prevent overflow */
+}
+
+.logo-svg {
+    width: 103px;
+    height: 31px;
+    fill: #111;
+}
+
+/* Main Content */
+.login-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.login-card {
+    background: var(--background-white);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-title {
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.form-input {
+    width: 100%;
+    height: 2.5rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    background: var(--background-white);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #007185;
+    box-shadow: 0 0 0 3px rgba(0, 113, 133, 0.3);
+}
+
+.form-input.error {
+    border-color: #d00;
+    box-shadow: 0 0 0 3px rgba(221, 0, 0, 0.1);
+}
+
+.error-message {
+    color: #d00;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* Button Styles */
+.continue-btn {
+    width: 100%;
+    height: 2.5rem;
+    background: var(--sportivo-yellow);
+    border: 1px solid #FCD200;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.continue-btn:hover {
+    background: var(--sportivo-yellow-hover);
+    transform: translateY(-1px);
+}
+
+.continue-btn:active {
+    transform: translateY(0);
+}
+
+.continue-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.continue-btn.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1rem;
+    height: 1rem;
+    margin: -0.5rem 0 0 -0.5rem;
+    border: 2px solid transparent;
+    border-top: 2px solid var(--text-primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Options Section */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 0.875rem;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 0.5rem;
+}
+
+.custom-checkbox {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.custom-checkbox.checked {
+    background: var(--sportivo-blue);
+    border-color: var(--sportivo-blue);
+}
+
+.custom-checkbox.checked::after {
+    content: "✓";
+    color: white;
+    font-size: 0.75rem;
+}
+
+.help-link {
+    color: var(--sportivo-blue);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.help-link:hover {
+    color: var(--sportivo-blue-hover);
+    text-decoration: underline;
+}
+
+/* Divider */
+.login-divider {
+    position: relative;
+    text-align: center;
+    margin: 2rem 0;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+}
+
+.login-divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e7e7e7;
+}
+
+.login-divider span {
+    background: var(--background-white);
+    padding: 0 1rem;
+    position: relative;
+}
+
+/* Create Account Button */
+.create-account-btn {
+    width: 100%;
+    height: 2.5rem;
+    background: var(--background-white);
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.create-account-btn:hover {
+    background: var(--background-gray);
+    transform: translateY(-1px);
+}
+
+.create-account-btn:active {
+    transform: translateY(0);
+}
+
+/* Footer Links */
+.login-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.footer-link {
+    color: var(--sportivo-blue);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: var(--sportivo-blue-hover);
+    text-decoration: underline;
+}
+
+/* Global Footer */
+.global-footer {
+    background: var(--background-white);
+    border-top: 1px solid #ddd;
+    padding: 2rem 1rem;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-links a {
+    color: var(--sportivo-blue);
+    text-decoration: none;
+    font-size: 0.75rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--sportivo-blue-hover);
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-main {
+        padding: 1rem;
+    }
+    
+    .login-card {
+        border: none;
+        box-shadow: none;
+        padding: 1.5rem;
+    }
+    
+    .header-container {
+        padding: 0 1rem;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .login-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+}
+
+/* Utility Classes */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Placeholder Styles */
+.form-input::placeholder {
+    color: #767676;
+    opacity: 0.7;
+    font-size: 0.875rem;
+}
+
+.form-input:focus::placeholder {
+    opacity: 0.5;
+}
+
+/* Login Page Logo Styling */
+.login-page-logo {
+  height: 80px; /* You can make this as big as you want now */
+  width: 100px;
+  max-height: 55px; /* Safety limit to prevent breaking layout */
+}

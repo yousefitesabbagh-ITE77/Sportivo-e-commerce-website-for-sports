@@ -1,0 +1,113 @@
+[
+  {
+    "id": "football-1",
+    "image": "images/products/football/2010-ball.webp",
+    "name": "Nike Premier League Football",
+    "category": "Balls",
+    "keywords": ["football", "ball", "2010", "premier league", "nike"],
+    "priceCents": 7499,
+    "rating": {
+      "stars": 4.6,
+      "count": 5174,
+      "distribution": {
+        "5": 82,
+        "4": 8,
+        "3": 5,
+        "2": 1,
+        "1": 4
+      }
+    },
+    "images": {
+      "main": "images/products/football/2010-ball.webp",
+      "gallery": [
+        "images/products/football/2010-ball-1.webp",
+        "images/products/football/2010-ball-2.webp",
+        "images/products/football/2010-ball-3.webp"
+      ]
+    },
+    "description": {
+      "summary": "The official Nike Premier League Football, engineered for precision and control on the pitch.",
+      "details": "Built for the highest level of play, the Nike Premier League Football features a high-contrast graphic design for enhanced visibility. Its 12-panel construction provides a true and accurate flight, while the textured casing offers superior grip and control in all weather conditions. This ball is a testament to Nike's commitment to performance and innovation, trusted by professional athletes worldwide."
+    },
+    "specifications": {
+      "Material": "60% Rubber, 15% Polyurethane, 13% Polyester, 12% EVA",
+      "Size": "5 (Official)",
+      "Weight": "410-450 grams",
+      "Brand": "Nike",
+      "Color": "White/Black/Volt",
+      "Warranty": "2-year manufacturer's warranty"
+    }
+  },
+  {
+    "id": "football-2",
+    "image": "images/products/football/AC-light-green-shirt.avif",
+    "name": "2025-2026 AC Milan Home Shirt",
+    "rating": {
+      "stars": 4.7,
+      "count": 2893,
+      "distribution": {
+        "5": 78,
+        "4": 12,
+        "3": 6,
+        "2": 2,
+        "1": 2
+      }
+    },
+    "priceCents": 11720,
+    "keywords": ["football", "shirt", "Milan"]
+  },
+  {
+    "id": "football-3",
+    "image": "images/products/football/Ac-milan-shirt.avif",
+    "name": "2025-2026 AC Milan Home Shirt",
+    "rating": {
+      "stars": 4.5,
+      "count": 1567,
+      "distribution": {
+        "5": 75,
+        "4": 15,
+        "3": 6,
+        "2": 2,
+        "1": 2
+      }
+    },
+    "priceCents": 7583,
+    "keywords": ["football", "shirt", "Milan"]
+  },
+  {
+    "id": "football-4",
+    "image": "images/products/football/aerocs-ball.webp",
+    "name": "AEROCS Football Soccer Ball Match Ball World Cup",
+    "rating": {
+      "stars": 4.3,
+      "count": 892,
+      "distribution": {
+        "5": 68,
+        "4": 18,
+        "3": 8,
+        "2": 3,
+        "1": 3
+      }
+    },
+    "priceCents": 7499,
+    "keywords": ["football", "ball", "AEROCS"]
+  },
+  {
+    "id": "football-5",
+    "image": "images/products/football/AIR+ZOOM+MAXFLY+2+ALL.avif",
+    "name": "Nike Phantom 6 Low Elite EA SPORTS FC",
+    "rating": {
+      "stars": 4.8,
+      "count": 3241,
+      "distribution": {
+        "5": 85,
+        "4": 10,
+        "3": 3,
+        "2": 1,
+        "1": 1
+      }
+    },
+    "priceCents": 7499,
+    "keywords": ["football", "ball", "sneaker"]
+  }
+]
