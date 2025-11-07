@@ -2,8 +2,8 @@
 
 A modern e-commerce website for sports equipment.
 
-## 🎥 Project Demo
+## 🎥 Project Demo Video
 
-You can view a demo video of the project in action by downloading the file below:
+Watch the video below to see a walkthrough of the website's features:
 
-[Download Demo Video (sportivo.mp4)](sportivo.mp4)
+[![Sportivo Demo Video](https://img.youtube.com/vi/Bd926DRyz68/0.jpg)](https://youtu.be/Bd926DRyz68)
