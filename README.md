@@ -1,5 +1,9 @@
 # Sportivo Project Demo
 
-Here is a demo video of the project in action:
+A modern e-commerce website for sports equipment.
 
-https://github.com/yousefitesabbagh-ITE77/Sportivo-e-commerce-website-for-sports/blob/main/sportivo.mp4
+## 🎥 Project Demo
+
+You can view a demo video of the project in action by downloading the file below:
+
+**[Download Demo Video (sportivo.mp4)]**(sportivo.mp4)
