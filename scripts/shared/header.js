@@ -58,7 +58,7 @@ const HEADER_ACTIONS = {
     href: 'wishlist.html',
     className: 'wishlist-link',
     label: 'Saved',
-    value: 'Wishlist',
+    value: 'Saved',
     valueClass: 'wishlist-text',
     countClass: 'wishlist-count js-wishlist-count'
   },
@@ -82,6 +82,11 @@ export function renderHeader(options = {}) {
   const requestedVariant = options.variant || 'store';
   const headerConfig = HEADER_VARIANTS[requestedVariant] || HEADER_VARIANTS.store;
   const activeAction = options.active || getActiveActionFromPath();
+  
+
+  document.body.classList.remove('has-store-header', 'has-compact-header');
+  document.body.classList.add(headerConfig.includeSearch ? 'has-store-header' : 'has-compact-header');
+  document.body.dataset.headerVariant = requestedVariant;
 
   headerContainer.innerHTML = `
     <header class="sportivo-header ${headerConfig.className}" data-header-variant="${requestedVariant}">

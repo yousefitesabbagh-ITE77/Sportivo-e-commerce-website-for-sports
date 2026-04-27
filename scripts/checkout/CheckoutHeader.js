@@ -7,6 +7,8 @@ export function renderCheckoutHeader() {
     return;
   }
 
+  document.body.classList.add('has-checkout-header');
+
   checkoutHeaderElement.innerHTML = `
     <header class="sportivo-header checkout-sportivo-header" data-header-variant="checkout">
       <div class="sportivo-header-left-section checkout-header-side">
