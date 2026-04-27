@@ -1,0 +1,19 @@
+<svg width="236" height="64" viewBox="0 0 236 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="sportivoLogoWhiteTitle">
+  <title id="sportivoLogoWhiteTitle">Sportivo</title>
+  <defs>
+    <linearGradient id="sportivoMarkGradientWhite" x1="7" y1="6" x2="57" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D4ED8"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="sportivoAccentGradientWhite" x1="15" y1="18" x2="50" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FACC15"/>
+      <stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="18" fill="url(#sportivoMarkGradientWhite)"/>
+  <path d="M19 39.2C22.5 44 29.1 46.2 35.1 44.5C40.8 42.9 45.2 38.2 46.3 32.4" stroke="white" stroke-width="4.7" stroke-linecap="round"/>
+  <path d="M45.8 24.8C42.2 20 35.6 17.9 29.7 19.6C24 21.2 19.6 25.9 18.5 31.6" stroke="white" stroke-opacity="0.92" stroke-width="4.7" stroke-linecap="round"/>
+  <path d="M35.7 13.5L23.8 35.3H32.1L28.4 50.5L42.2 27.3H33.6L35.7 13.5Z" fill="url(#sportivoAccentGradientWhite)"/>
+  <text x="74" y="39" fill="#FFFFFF" font-family="Inter, Roboto, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="-1.3">Sportivo</text>
+  <path d="M76 47H177" stroke="#FACC15" stroke-width="4" stroke-linecap="round"/>
+</svg>

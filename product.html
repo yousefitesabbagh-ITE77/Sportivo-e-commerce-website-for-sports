@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Product Details | Sportivo</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+      name="description"
+      content="View Sportivo product details, specifications, price, rating, wishlist, and cart actions."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    >
+
+    <link rel="icon" href="images/logo/favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/shared/sportivo-header.css">
+    <link rel="stylesheet" href="styles/shared/login-modal.css">
+    <link rel="stylesheet" href="styles/pages/product/product.css">
+  </head>
+
+  <body>
+    <div class="page-container">
+      <a class="skip-link" href="#main-content">Skip to main content</a>
+      <div id="header-container"></div>
+
+      <main id="main-content" class="main" tabindex="-1">
+        <div class="product-details-container js-product-details-container">
+          <!-- Product details will be inserted here by JavaScript. -->
+        </div>
+      </main>
+
+      <div id="footer-container"></div>
+    </div>
+
+    <script src="scripts/auth-modal.js"></script>
+
+    <script type="module">
+      import { renderHeader } from './scripts/shared/header.js';
+      import { renderFooter } from './scripts/shared/footer.js';
+
+      document.addEventListener('DOMContentLoaded', async () => {
+        renderHeader({ variant: 'store' });
+        renderFooter();
+
+        await import('./scripts/product.js');
+      });
+    </script>
+  </body>
+</html>

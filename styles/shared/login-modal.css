@@ -1,0 +1,459 @@
+/* Login Modal */
+
+.login-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(15, 23, 42, 0.62);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  backdrop-filter: blur(5px);
+}
+
+.login-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.login-modal {
+  width: min(100%, 430px);
+  max-height: 92vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.3);
+  transform: translateY(14px) scale(0.96);
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.login-modal-overlay.active .login-modal {
+  transform: translateY(0) scale(1);
+}
+
+.login-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+  background: white;
+  color: #475569;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.login-modal-close:hover {
+  background: #f8fafc;
+  color: #111827;
+  transform: rotate(4deg);
+}
+
+.login-modal-header {
+  padding: 30px 30px 18px;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.login-modal-eyebrow {
+  color: #007185;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.login-modal-title {
+  color: #111827;
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.login-modal-body {
+  padding: 24px 30px 30px;
+}
+
+.login-account-note {
+  background: #eef6f8;
+  border: 1px solid #cce7ed;
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 18px;
+  color: #0f5661;
+  line-height: 1.55;
+}
+
+.login-account-note strong {
+  display: block;
+  color: #007185;
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.login-account-note span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.login-form {
+  margin: 0;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 7px;
+  color: #111827;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.form-input {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid #dbe3ea;
+  border-radius: 12px;
+  padding: 0 13px;
+  color: #111827;
+  font: inherit;
+  font-size: 14px;
+  background: white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #007185;
+  box-shadow: 0 0 0 4px rgba(0, 113, 133, 0.12);
+}
+
+.form-input.valid {
+  border-color: #12b76a;
+}
+
+.form-input.error {
+  border-color: #e11d48;
+  box-shadow: 0 0 0 4px rgba(225, 29, 72, 0.09);
+}
+
+.form-feedback {
+  min-height: 18px;
+  margin-top: 5px;
+  color: #e11d48;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 4px 0 16px;
+}
+
+.checkbox-label input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.checkmark {
+  width: 19px;
+  height: 19px;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark {
+  background: #007185;
+  border-color: #007185;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+  content: "✓";
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.form-message {
+  min-height: 0;
+  margin-bottom: 14px;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.form-message-error,
+.form-message-success,
+.form-message-info {
+  border-radius: 12px;
+  padding: 11px 12px;
+}
+
+.form-message-error {
+  background: #fff1f2;
+  color: #be123c;
+  border: 1px solid #fecdd3;
+}
+
+.form-message-success {
+  background: #ecfdf3;
+  color: #067647;
+  border: 1px solid #bbf7d0;
+}
+
+.form-message-info {
+  background: #f8fafc;
+  color: #475569;
+  border: 1px solid #e5e7eb;
+}
+
+.continue-btn {
+  width: 100%;
+  min-height: 46px;
+  border: none;
+  border-radius: 999px;
+  background: #111827;
+  color: white;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 22px rgba(17, 24, 39, 0.18);
+  transition: background-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+.continue-btn:hover:not(:disabled) {
+  background: #007185;
+  transform: translateY(-1px);
+}
+
+.continue-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+.btn-loading {
+  display: none;
+  align-items: center;
+  gap: 8px;
+}
+
+.continue-btn.is-loading .btn-text {
+  display: none;
+}
+
+.continue-btn.is-loading .btn-loading {
+  display: inline-flex;
+}
+
+.loading-spinner-small {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 24px 0;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.divider-text {
+  position: relative;
+  background: white;
+  padding: 0 12px;
+}
+
+.create-account-btn,
+.sign-out-btn {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid #dbe3ea;
+  border-radius: 999px;
+  background: white;
+  color: #111827;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.create-account-btn:hover,
+.sign-out-btn:hover {
+  background: #f8fafc;
+  border-color: #007185;
+  color: #007185;
+}
+
+.auth-small-print {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.55;
+  text-align: center;
+  margin: 14px 0 0;
+}
+
+.signed-in-state {
+  text-align: center;
+}
+
+.signed-in-avatar {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 18px;
+  border-radius: 24px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, #111827, #007185);
+  color: white;
+  font-size: 30px;
+  font-weight: 950;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.2);
+}
+
+.signed-in-state h3 {
+  color: #111827;
+  font-size: 24px;
+  margin: 0 0 8px;
+}
+
+.signed-in-state p {
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0 0 22px;
+}
+
+.signed-in-state strong {
+  color: #111827;
+}
+
+.signed-in-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.signed-in-link {
+  min-height: 44px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .login-modal {
+    border-radius: 18px;
+  }
+
+  .login-modal-header {
+    padding: 26px 22px 16px;
+  }
+
+  .login-modal-body {
+    padding: 22px;
+  }
+
+  .login-modal-title {
+    font-size: 26px;
+  }
+}
+/* Phase 9: account modal brand alignment */
+.login-account-note {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #92400e;
+}
+
+.login-account-note strong {
+  color: #92400e;
+}
+
+.login-modal-title,
+.login-modal-eyebrow,
+.login-modal,
+.login-form,
+.auth-small-print {
+  font-family: Inter, Roboto, Arial, sans-serif;
+}
+
+.login-modal-eyebrow {
+  color: #b45309;
+}
+
+.login-modal {
+  border-radius: 24px;
+}
+
+.continue-btn,
+.create-account-btn,
+.sign-out-btn,
+.signed-in-link {
+  border-radius: 999px;
+  font-weight: 900;
+}
+
+.continue-btn {
+  background: #facc15;
+  border-color: #eab308;
+  color: #0f172a;
+}
+
+.continue-btn:hover {
+  background: #fbbf24;
+}

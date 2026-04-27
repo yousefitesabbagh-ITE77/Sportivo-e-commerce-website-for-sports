@@ -1,0 +1,227 @@
+/* Checkout Header */
+
+.checkout-header .sportivo-header {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+}
+
+.checkout-sportivo-header {
+  height: 64px;
+}
+
+.checkout-header-side {
+  width: 220px;
+  display: flex;
+  align-items: center;
+}
+
+.checkout-header-logo-section {
+  justify-content: center;
+  text-align: center;
+}
+
+.checkout-logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkout-logo {
+  width: 145px;
+  margin-top: -18px;
+}
+
+.checkout-mobile-logo {
+  display: none;
+}
+
+.checkout-back-link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+}
+
+.checkout-back-link:hover {
+  border-color: white;
+}
+
+.checkout-secure-section {
+  justify-content: flex-end;
+}
+
+.checkout-secure-text {
+  color: #d9f99d;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .checkout-header-side {
+    width: auto;
+  }
+
+  .checkout-back-link {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .checkout-secure-text {
+    display: none;
+  }
+
+  .checkout-logo {
+    display: none;
+  }
+
+  .checkout-mobile-logo {
+    display: block;
+    height: 36px;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-back-link {
+    font-size: 0;
+  }
+
+  .checkout-back-link::before {
+    content: "← Shop";
+    font-size: 12px;
+  }
+}
+/* Phase 9: checkout header brand alignment */
+.checkout-header .sportivo-header {
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.95);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  color: #0f172a;
+  backdrop-filter: blur(18px);
+}
+
+.checkout-sportivo-header {
+  min-height: 72px;
+  padding: 0 clamp(16px, 4vw, 34px);
+}
+
+.checkout-back-link {
+  align-items: center;
+  border: 1px solid #dbe3ea;
+  border-radius: 999px;
+  color: #0f172a;
+  display: inline-flex;
+  font-family: Inter, Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 14px;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.checkout-back-link:hover {
+  background: #f8fafc;
+  border-color: #facc15;
+  color: #0f172a;
+  transform: translateY(-1px);
+}
+
+.checkout-logo {
+  height: 46px;
+  margin-top: 0;
+  object-fit: contain;
+  width: 170px;
+}
+
+.checkout-secure-text {
+  align-items: center;
+  background: #ecfdf3;
+  border: 1px solid #bbf7d0;
+  border-radius: 999px;
+  color: #067647;
+  display: inline-flex;
+  font-family: Inter, Roboto, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 14px;
+}
+
+.checkout-secure-text svg {
+  fill: currentColor;
+  height: 18px;
+  width: 18px;
+}
+
+@media (max-width: 700px) {
+  .checkout-sportivo-header {
+    min-height: 66px;
+    padding-inline: 12px;
+  }
+
+  .checkout-logo {
+    display: none;
+  }
+
+  .checkout-mobile-logo {
+    display: block;
+    height: 42px;
+    width: 42px;
+  }
+
+  .checkout-back-link {
+    font-size: 0;
+    min-width: 42px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .checkout-back-link span:first-child {
+    font-size: 18px;
+  }
+}
+
+
+/* Phase 10: focused checkout header */
+.checkout-header-logo-section {
+  flex-direction: column;
+  gap: 2px;
+}
+
+.checkout-step-label {
+  color: #64748b;
+  font-family: Inter, Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@media (max-width: 860px) {
+  .checkout-header .sportivo-header {
+    display: flex;
+    height: 72px;
+  }
+
+  .checkout-header-logo-section {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .checkout-step-label {
+    display: none;
+  }
+}

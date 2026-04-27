@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Terms of Use | Sportivo</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+      name="description"
+      content="Terms of use for shopping and browsing on Sportivo."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    >
+
+    <link rel="icon" href="images/logo/favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/shared/sportivo-header.css">
+    <link rel="stylesheet" href="styles/shared/login-modal.css">
+    <link rel="stylesheet" href="styles/pages/legal.css">
+  </head>
+
+  <body>
+    <div class="page-container">
+      <a class="skip-link" href="#main-content">Skip to main content</a>
+      <div id="header-container"></div>
+
+      <main id="main-content" class="legal-page" tabindex="-1">
+        <article class="legal-container">
+          <header class="legal-header">
+            <p class="legal-eyebrow">Sportivo policy</p>
+            <h1>Terms of Use</h1>
+            <p class="last-updated">Last updated: April 2026</p>
+            <p class="legal-intro">
+              These terms outline how Sportivo product browsing, checkout, account, and order features are presented to shoppers.
+            </p>
+          </header>
+
+          <nav class="table-of-contents" aria-label="Terms table of contents">
+            <h2>Contents</h2>
+            <ol>
+              <li><a href="#shopping-experience">Shopping experience</a></li>
+              <li><a href="#no-real-purchases">No real purchases</a></li>
+              <li><a href="#local-storage">Local storage</a></li>
+              <li><a href="#product-content">Product content</a></li>
+              <li><a href="#limitations">Limitations</a></li>
+            </ol>
+          </nav>
+
+          <div class="legal-content">
+            <section id="shopping-experience">
+              <h2>1. Shopping experience</h2>
+              <p>
+                Sportivo lets shoppers browse sports gear, manage a cart, save products, place an order, and follow order status from one consistent interface.
+              </p>
+            </section>
+
+            <section id="no-real-purchases">
+              <h2>2. No real purchases</h2>
+              <p>
+                Product availability, checkout totals, order status, and delivery dates are presented for the shopping experience. No live payment gateway or fulfillment service is connected in this version.
+              </p>
+            </section>
+
+            <section id="local-storage">
+              <h2>3. Local storage</h2>
+              <p>
+                Sportivo stores cart items, wishlist items, checkout preferences, and order history on your device so the experience remains available after refreshing the page.
+              </p>
+            </section>
+
+            <section id="product-content">
+              <h2>4. Product content</h2>
+              <p>
+                Product names, descriptions, ratings, images, and delivery information are curated for the Sportivo catalog and may not represent official brand information, live pricing, or real-time inventory.
+              </p>
+            </section>
+
+            <section id="limitations">
+              <h2>5. Limitations</h2>
+              <p>
+                This version does not include a live payment gateway, production authentication, real inventory management, or carrier fulfillment integration.
+              </p>
+            </section>
+          </div>
+        </article>
+      </main>
+
+      <div id="footer-container"></div>
+    </div>
+
+    <script src="scripts/auth-modal.js"></script>
+
+    <script type="module">
+      import { renderHeader } from './scripts/shared/header.js';
+      import { renderFooter } from './scripts/shared/footer.js';
+      import { updateCartQuantity } from './scripts/cart-manager.js';
+      import { updateWishlistCounter } from './scripts/wishlist-manager.js';
+
+      document.addEventListener('DOMContentLoaded', () => {
+        renderHeader({ variant: 'legal' });
+        renderFooter();
+        updateCartQuantity();
+        updateWishlistCounter();
+      });
+    </script>
+  </body>
+</html>

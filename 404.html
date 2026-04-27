@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Page Not Found | Sportivo</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Sportivo page you are looking for could not be found.">
+    <meta name="theme-color" content="#0f172a">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    >
+
+    <link rel="icon" href="images/logo/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/shared/general.css">
+
+    <style>
+      body {
+        background: #f4f7fb;
+        font-family: Inter, Roboto, Arial, sans-serif;
+      }
+
+      .not-found-page {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 32px;
+      }
+
+      .not-found-card {
+        width: min(680px, 100%);
+        background: #ffffff;
+        border: 1px solid #dbe4ee;
+        border-radius: 28px;
+        padding: 42px;
+        text-align: center;
+        box-shadow: 0 24px 80px rgba(15, 23, 42, 0.12);
+      }
+
+      .not-found-logo {
+        width: 190px;
+        height: auto;
+        margin-bottom: 34px;
+      }
+
+      .not-found-kicker {
+        color: #0f766e;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+
+      .not-found-title {
+        color: #0f172a;
+        font-size: clamp(34px, 5vw, 54px);
+        line-height: 1.02;
+        margin-bottom: 16px;
+      }
+
+      .not-found-copy {
+        color: #475569;
+        font-size: 18px;
+        line-height: 1.7;
+        margin: 0 auto 30px;
+        max-width: 520px;
+      }
+
+      .not-found-actions {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .not-found-actions a {
+        min-height: 48px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 22px;
+        border-radius: 999px;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .not-found-primary {
+        color: #0f172a;
+        background: #ffd21c;
+        border: 1px solid #f7c600;
+      }
+
+      .not-found-secondary {
+        color: #0f172a;
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+      }
+
+      @media (max-width: 520px) {
+        .not-found-card {
+          padding: 30px 22px;
+        }
+
+        .not-found-actions a {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="not-found-page" id="main-content">
+      <section class="not-found-card" aria-labelledby="not-found-title">
+        <img class="not-found-logo" src="images/logo/sportivo-logo.svg" alt="Sportivo">
+        <p class="not-found-kicker">404 error</p>
+        <h1 class="not-found-title" id="not-found-title">This page is out of bounds.</h1>
+        <p class="not-found-copy">
+          The page you are looking for may have moved, expired, or no longer exists. Head back to the store and keep browsing the latest sports gear.
+        </p>
+        <div class="not-found-actions">
+          <a class="not-found-primary" href="index.html">Back to store</a>
+          <a class="not-found-secondary" href="orders.html">View orders</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

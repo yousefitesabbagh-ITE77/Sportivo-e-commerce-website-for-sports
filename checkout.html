@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Checkout | Sportivo</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+      name="description"
+      content="Review your Sportivo cart, choose delivery options, and place your order."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    >
+
+    <link rel="icon" href="images/logo/favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/shared/sportivo-header.css">
+    <link rel="stylesheet" href="styles/pages/checkout/checkout-header.css">
+    <link rel="stylesheet" href="styles/pages/checkout/checkout.css">
+  </head>
+
+  <body>
+    <div class="page-container">
+      <a class="skip-link" href="#main-content">Skip to main content</a>
+      <div class="checkout-header js-checkout-header">
+        <!-- Checkout header will be inserted here by JavaScript. -->
+      </div>
+
+      <main id="main-content" class="main" tabindex="-1">
+        <h1 class="page-title">Checkout</h1>
+
+        <p class="checkout-subtitle">Review your cart, enter shipping details, choose a payment method, and place your order.</p>
+
+        <div class="checkout-grid">
+          <div class="order-summary js-order-summary">
+            <!-- Cart items will be inserted here by JavaScript. -->
+          </div>
+
+          <div class="payment-summary js-payment-summary">
+            <!-- Payment summary will be inserted here by JavaScript. -->
+          </div>
+        </div>
+      </main>
+
+      <div id="footer-container"></div>
+    </div>
+
+    <script type="module">
+      import { renderFooter } from './scripts/shared/footer.js';
+
+      document.addEventListener('DOMContentLoaded', async () => {
+        renderFooter();
+
+        await import('./scripts/checkout.js');
+      });
+    </script>
+  </body>
+</html>

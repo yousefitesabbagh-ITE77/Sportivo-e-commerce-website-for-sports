@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Accessibility | Sportivo</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+      name="description"
+      content="Accessibility information for browsing and shopping on Sportivo."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    >
+
+    <link rel="icon" href="images/logo/favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/shared/sportivo-header.css">
+    <link rel="stylesheet" href="styles/shared/login-modal.css">
+    <link rel="stylesheet" href="styles/pages/legal.css">
+  </head>
+
+  <body>
+    <div class="page-container">
+      <a class="skip-link" href="#main-content">Skip to main content</a>
+      <div id="header-container"></div>
+
+      <main id="main-content" class="legal-page" tabindex="-1">
+        <article class="legal-container">
+          <header class="legal-header">
+            <p class="legal-eyebrow">Sportivo support</p>
+            <h1>Accessibility</h1>
+            <p class="last-updated">Last updated: April 2026</p>
+            <p class="legal-intro">
+              Sportivo aims to provide a clean and usable front-end experience across common devices
+              and screen sizes.
+            </p>
+          </header>
+
+          <nav class="table-of-contents" aria-label="Accessibility table of contents">
+            <h2>Contents</h2>
+            <ol>
+              <li><a href="#accessibility-goals">Accessibility goals</a></li>
+              <li><a href="#implemented-features">Implemented features</a></li>
+              <li><a href="#current-limitations">Current limitations</a></li>
+              <li><a href="#future-improvements">Future improvements</a></li>
+            </ol>
+          </nav>
+
+          <div class="legal-content">
+            <section id="accessibility-goals">
+              <h2>1. Accessibility goals</h2>
+              <p>
+                The goal is to keep the Sportivo shopping interface readable, responsive, keyboard friendly, and easy to understand.
+              </p>
+            </section>
+
+            <section id="implemented-features">
+              <h2>2. Implemented features</h2>
+              <ul>
+                <li>Semantic page structure using header, main, article, section, and nav elements.</li>
+                <li>Readable text contrast and clear spacing between sections.</li>
+                <li>Alternative text for meaningful product and navigation images.</li>
+                <li>Responsive layouts for smaller screens.</li>
+                <li>Form labels and accessible names for important inputs and buttons.</li>
+              </ul>
+            </section>
+
+            <section id="current-limitations">
+              <h2>3. Current limitations</h2>
+              <p>
+                Sportivo continues to improve accessibility across product browsing, checkout, account, and order pages. Additional screen-reader testing and full keyboard audits are recommended as the experience grows.
+              </p>
+            </section>
+
+            <section id="future-improvements">
+              <h2>4. Future improvements</h2>
+              <ul>
+                <li>Add a visible skip-to-content link.</li>
+                <li>Improve focus states across all interactive controls.</li>
+                <li>Add more detailed ARIA feedback for cart and wishlist updates.</li>
+                <li>Test the full checkout flow with keyboard navigation only.</li>
+              </ul>
+            </section>
+          </div>
+        </article>
+      </main>
+
+      <div id="footer-container"></div>
+    </div>
+
+    <script src="scripts/auth-modal.js"></script>
+
+    <script type="module">
+      import { renderHeader } from './scripts/shared/header.js';
+      import { renderFooter } from './scripts/shared/footer.js';
+      import { updateCartQuantity } from './scripts/cart-manager.js';
+      import { updateWishlistCounter } from './scripts/wishlist-manager.js';
+
+      document.addEventListener('DOMContentLoaded', () => {
+        renderHeader({ variant: 'legal' });
+        renderFooter();
+        updateCartQuantity();
+        updateWishlistCounter();
+      });
+    </script>
+  </body>
+</html>

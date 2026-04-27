@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build / deploy output
+dist/
+build/
+.netlify/
+.vercel/
+
+# Test coverage
+coverage/
+
+# Large local media
+*.mp4
+*.mov
+*.avi
+*.webm
+*.mkv
+
+# Archives
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Temporary files
+tmp/
+temp/
+.cache/
